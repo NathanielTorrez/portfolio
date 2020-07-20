@@ -17,11 +17,13 @@ export default function SkillsCard({ photo, software }) {
           align-items: center;
           font-size: 2.1vh;
           margin-left: 1%;
+          box-shadow: 0 5px 8px 0px rgba(0, 0, 0, 0.6);
         }
         img {
           margin-left: 5%;
           margin-right: 5%;
           border-radius: 15px;
+          box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.4);
         }
         .cardName {
           width: 60%;
