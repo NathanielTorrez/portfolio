@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import TopSection from "../components/topSection.js";
 import AboutSection from "../components/AboutSection.js";
+import ProjectsSection from "../components/ProjectsSection.js";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ export default class Home extends React.Component {
         <main>
           <TopSection />
           <AboutSection />
+          <ProjectsSection />
         </main>
 
         <footer>Created by Nathaniel Torrez Development</footer>
