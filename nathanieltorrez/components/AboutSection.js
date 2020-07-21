@@ -47,7 +47,7 @@ export default function AboutSection() {
         }
 
         .title {
-          font-size: 50px;
+          font-size: 4.99vh;
           text-decoration: underline;
         }
         .skillsContainer {
@@ -63,14 +63,14 @@ export default function AboutSection() {
         .bioImg {
           width: 28%;
           height: 100%;
-          border: 20px solid white;
+          border: 2vh solid white;
           border-radius: 25px;
           margin-left: 5%;
-          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0.5vh 1.5vh 0px rgba(0, 0, 0, 0.6);
         }
         .bio {
           width: 70%;
-          font-size: 24px;
+          font-size: 3vh;
           margin-bottom: 4%;
           margin-top: 8%;
           font-family: "Indie Flower", cursive;
@@ -79,9 +79,16 @@ export default function AboutSection() {
           height: 45%;
           display: flex;
           flex-direction: row;
-
           justify-content: center;
           align-items: center;
+        }
+        @media (max-width: 600px) {
+          .bio {
+            font-size: 4vh;
+          }
+          .title {
+            font-size: 5.5vh;
+          }
         }
       `}</style>
     </>

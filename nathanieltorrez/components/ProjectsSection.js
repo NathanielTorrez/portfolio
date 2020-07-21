@@ -60,7 +60,7 @@ export default function ProjectsSection() {
       <style jsx>{`
         .projectsSectionContainer {
           height: 150vh;
-          width: 100vw;
+          width: 100%;
           background: white;
           color: #252934;
           display: flex;
@@ -69,8 +69,16 @@ export default function ProjectsSection() {
           align-items: center;
         }
         .title {
-          font-size: 50px;
+          font-size: 5vh;
           text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+          .projectsSectionContainer {
+            height: 225vh;
+          }
+          .title {
+            font-size: 7vh;
+          }
         }
       `}</style>
     </>

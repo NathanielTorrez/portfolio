@@ -4,24 +4,26 @@ export default function TopSection() {
   return (
     <>
       <section className="top">
-        <h1 className="intro">
+        <p className="intro">
           <span className="introName">Nathaniel Torrez.</span>
           <br />
           <span className="introTextRed">Full Stack Developer</span>,{" "}
           <span className="introTextGreen">Tech Enthusiast</span> and
           <span className="introTextBlue"> Entrepeneur</span>.
-        </h1>
+        </p>
       </section>
       <style jsx>
         {`
           .top {
             color: #eaeaea;
             height: 100vh;
+            width: 90%;
+            display: flex;
+            align-items: center;
           }
 
           .intro {
-            margin-top: 25%;
-            font-size: 60px;
+            font-size: 6vh;
             width: 100%;
             font-weight: 600;
           }
