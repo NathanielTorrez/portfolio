@@ -14,6 +14,7 @@ export default function SkillsCard({ photo, software }) {
           border: 0.3px solid #252934;
           border-radius: 25px;
           display: flex;
+          flex: auto;
           align-items: center;
           font-size: 2.1vh;
           margin-left: 1%;
