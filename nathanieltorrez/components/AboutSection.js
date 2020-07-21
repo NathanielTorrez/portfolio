@@ -1,5 +1,9 @@
 import React from "react";
 import SkillsCard from "./SkillsCard.js";
+import Slide from "react-reveal/Slide";
+import Flip from "react-reveal/Flip";
+import Roll from "react-reveal/Roll";
+import Bounce from "react-reveal/Bounce";
 
 export default function AboutSection() {
   const softwares = [
@@ -17,22 +21,29 @@ export default function AboutSection() {
   return (
     <>
       <section className="aboutContainer">
-        <h1 className="title">About</h1>
+        <Flip right>
+          <h1 className="title">About</h1>
+        </Flip>
         <div className="bioAndSkillsContainer">
-          <img src="/bio1.jpg" className="bioImg"></img>
-          <div className="skillsContainer">
-            {softwares.map((arr, index) => (
-              <SkillsCard photo={arr[1]} software={arr[0]} key={index} />
-            ))}
-          </div>
+          <Roll left>
+            <img src="/bio1.jpg" className="bioImg"></img>
+          </Roll>
+          <Slide right>
+            <div className="skillsContainer">
+              {softwares.map((arr, index) => (
+                <SkillsCard photo={arr[1]} software={arr[0]} key={index} />
+              ))}
+            </div>
+          </Slide>
         </div>
-        <p className="bio">
-          That's me Nathaniel Torrez and I am a full stack software engineer
-          with passion for making peoples lives easier or more fun through the
-          use of technology! I take pride in my ability to adapt and learn new
-          technologies very fast, below is an interactice list of strongest
-          skills!
-        </p>
+        <Bounce bottom>
+          <p className="bio">
+            That's me Nathaniel Torrez and I am a full stack software engineer
+            with passion for making peoples lives easier or more fun through the
+            use of technology! I take pride in my ability to adapt and learn new
+            technologies very fast, above is a list of strongest skills!
+          </p>
+        </Bounce>
       </section>
       <style jsx>{`
         .aboutContainer {
@@ -42,8 +53,10 @@ export default function AboutSection() {
           flex: auto;
           flex-direction: column;
           align-items: center;
-          background: #eaeaea;
+          //background: #eaeaea;
+          background: white;
           color: #252934;
+          font-family: "Montserrat", sans-serif;
         }
 
         .title {

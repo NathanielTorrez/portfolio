@@ -11,7 +11,7 @@ export default function SkillsCard({ photo, software }) {
         .cardContainer {
           width: 34vh;
           height: 5vh;
-          border: 0.03vh solid #252934;
+          border: 0.02vh solid gray;
           border-radius: 25px;
           display: flex;
           flex: auto;
@@ -35,6 +35,19 @@ export default function SkillsCard({ photo, software }) {
           .cardContainer {
             width: 23.2vh;
             height: 7vh;
+            font-size: 3vh;
+          }
+        }
+        @media (max-width: 800px) {
+          .cardContainer {
+            width: 23.2vh;
+            height: 7vh;
+            font-size: 3vh;
+          }
+        }
+        @media (max-width: 1500px) {
+          .cardContainer {
+            width: 23.2vh;
             font-size: 3vh;
           }
         }

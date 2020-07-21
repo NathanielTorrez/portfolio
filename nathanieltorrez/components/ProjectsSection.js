@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectTile from "./ProjectTile.js";
+import Flip from "react-reveal/Flip";
 
 export default function ProjectsSection() {
   const BottomsUpStack = [
@@ -27,7 +28,9 @@ export default function ProjectsSection() {
   return (
     <>
       <section className="projectsSectionContainer">
-        <div className="title">Projects</div>
+        <Flip right>
+          <div className="title">Projects</div>
+        </Flip>
         <ProjectTile
           title={"BottomsUp"}
           description={
@@ -67,12 +70,13 @@ export default function ProjectsSection() {
           flex: auto;
           flex-direction: column;
           align-items: center;
+          font-family: "Montserrat", sans-serif;
         }
         .title {
           font-size: 5vh;
           text-decoration: underline;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
           .projectsSectionContainer {
             height: 225vh;
           }

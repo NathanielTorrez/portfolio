@@ -1,16 +1,19 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 export default function TopSection() {
   return (
     <>
       <section className="top">
-        <p className="intro">
-          <span className="introName">Nathaniel Torrez.</span>
-          <br />
-          <span className="introTextRed">Full Stack Developer</span>,{" "}
-          <span className="introTextGreen">Tech Enthusiast</span> and
-          <span className="introTextBlue"> Entrepeneur</span>.
-        </p>
+        <Fade left>
+          <p className="intro">
+            <span className="introName">Nathaniel Torrez.</span>
+            <br />
+            <span className="introTextRed">Full Stack Developer</span>,{" "}
+            <span className="introTextGreen">Tech Enthusiast</span> and
+            <span className="introTextBlue"> Entrepeneur</span>.
+          </p>
+        </Fade>
       </section>
       <style jsx>
         {`
@@ -20,6 +23,7 @@ export default function TopSection() {
             width: 90%;
             display: flex;
             align-items: center;
+            font-family: "Montserrat", sans-serif;
           }
 
           .intro {
