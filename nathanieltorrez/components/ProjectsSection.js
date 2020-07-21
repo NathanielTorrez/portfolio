@@ -62,7 +62,7 @@ export default function ProjectsSection() {
       </section>
       <style jsx>{`
         .projectsSectionContainer {
-          height: 150vh;
+          min-height: 150vh;
           width: 100%;
           background: white;
           color: #252934;
@@ -76,12 +76,11 @@ export default function ProjectsSection() {
           font-size: 5vh;
           text-decoration: underline;
         }
-        @media (max-width: 800px) {
+        @media (max-width: 600px) {
           .projectsSectionContainer {
-            height: 225vh;
           }
           .title {
-            font-size: 7vh;
+            font-size: 5.5vh;
           }
         }
       `}</style>

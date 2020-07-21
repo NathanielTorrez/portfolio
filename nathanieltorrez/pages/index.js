@@ -29,23 +29,20 @@ export default class Home extends React.Component {
             content="width=device-width, initial-scale=1.0"
           />
         </Head>
-        <main>
-          <TopSection />
-          <AboutSection />
-          <ProjectsSection />
-        </main>
+        <body>
+          <main>
+            <TopSection />
+            <AboutSection />
+            <ProjectsSection />
+          </main>
+        </body>
 
         <footer>Created by Nathaniel Torrez Development</footer>
 
         <style jsx>{`
         main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background: #252934;
+          display: block;
+          min-height:100vh;
         }
 
         footer {
@@ -62,6 +59,7 @@ export default class Home extends React.Component {
         <style jsx global>{`
           html,
           body {
+            background: #252934;
             padding: 0;
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,

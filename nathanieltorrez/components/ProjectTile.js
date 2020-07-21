@@ -6,6 +6,7 @@ export default function ProjectTile({ title, description, tech, image }) {
     <>
       <Slide left>
         <div className="projectTile">
+          <div className="projectTitleHidden">{title}</div>
           <img className="projectPicture" src={image}></img>
           <div className="projectDescriptionContainer">
             <div className="projectTitle">{title}</div>
@@ -23,7 +24,8 @@ export default function ProjectTile({ title, description, tech, image }) {
       </Slide>
       <style jsx>{`
         .projectTile {
-          width: 80%;
+          min-width: 20%;
+          max-width: 98%;
           height: 29%;
           border: 0.1vh solid black;
           margin-top: 2%;
@@ -36,8 +38,8 @@ export default function ProjectTile({ title, description, tech, image }) {
           margin-top: 1%;
           margin-left: 0.5%;
           border-radius: 2.5vh;
-          height: 90%;
-          width: 30%;
+          min-width: 30%;
+          max-width: 40%;
           box-shadow: 0 0.5vh 1vh 0 rgba(0, 0, 0, 0.6);
         }
         .projectDescriptionContainer {
@@ -56,11 +58,17 @@ export default function ProjectTile({ title, description, tech, image }) {
           text-decoration: underline;
           margin-bottom: 2%;
         }
+        .projectTitleHidden {
+          display: none;
+          font-size: 5.5vh;
+          width: 100%;
+          text-decoration: underline;
+          margin-bottom: 2%;
+        }
         .projectBody {
           width: 100%;
           height: 30%;
           margin-top: 1%;
-          // border: .1vh solid black;
           font-size: 2vh;
         }
         .projectTechContainer {
@@ -72,37 +80,46 @@ export default function ProjectTile({ title, description, tech, image }) {
           justify-content: space-evenly;
         }
 
-        @media (max-width: 1000px) {
-          .projectTile {
-            width: 98%;
-            height: 30%;
-          }
-          .projectBody {
-            font-size: 2.2vh;
-            margin-top: 0;
-          }
-        }
         @media (max-width: 600px) {
           .projectTile {
-            width: 98%;
-            height: 30%;
+            margin-top: 5%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
           }
           .projectPicture {
-            height: 70%;
-            width: 40%;
-            margin-top: 10%;
-            margin-right: 2%;
+            min-width: 80%;
+            max-width: 95%;
+          }
+          .projectDescriptionContainer {
+            width: 90%;
           }
           .projectBody {
-            font-size: 3.5vh;
-            margin-top: 0;
-            margin-bottom: 10%;
           }
           .projectTitle {
+            display: none;
             font-size: 5vh;
+          }
+          .projectTitleHidden {
+            display: block;
           }
         }
       `}</style>
     </>
   );
 }
+
+// .projectTile {
+//   width: 98%;
+//   height: 30%;
+// }
+// .projectPicture {
+//  height: 70%;
+//  width: 40%;
+//  margin-top: 10%;
+//  margin-right: 2%;
+// }
+// .projectTile {
+//   width: 98%;
+//   height: 30%;
+// }

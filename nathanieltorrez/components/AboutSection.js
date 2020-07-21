@@ -31,7 +31,12 @@ export default function AboutSection() {
           <Slide right>
             <div className="skillsContainer">
               {softwares.map((arr, index) => (
-                <SkillsCard photo={arr[1]} software={arr[0]} key={index} />
+                <SkillsCard
+                  className="skillsAdjustment"
+                  photo={arr[1]}
+                  software={arr[0]}
+                  key={index}
+                />
               ))}
             </div>
           </Slide>
@@ -47,10 +52,9 @@ export default function AboutSection() {
       </section>
       <style jsx>{`
         .aboutContainer {
-          height: 100vh;
+          min-height: 100vh;
           width: 100%;
           display: flex;
-          flex: auto;
           flex-direction: column;
           align-items: center;
           //background: #eaeaea;
@@ -74,11 +78,9 @@ export default function AboutSection() {
           justify-content: center;
         }
         .bioImg {
-          width: 28%;
-          height: 100%;
+          max-width: 30%;
           border: 2vh solid white;
           border-radius: 25px;
-          margin-left: 5%;
           box-shadow: 0 0.5vh 1.5vh 0px rgba(0, 0, 0, 0.6);
         }
         .bio {
@@ -89,18 +91,33 @@ export default function AboutSection() {
           font-family: "Indie Flower", cursive;
         }
         .bioAndSkillsContainer {
-          height: 45%;
+          min-height: 45%;
           display: flex;
           flex-direction: row;
           justify-content: center;
           align-items: center;
         }
+        .skillsAdjustment {
+        }
         @media (max-width: 600px) {
           .bio {
-            font-size: 4vh;
+            width: 90%;
+            font-size: 3vh;
           }
           .title {
             font-size: 5.5vh;
+          }
+          .bioAndSkillsContainer {
+            flex-direction: column;
+          }
+          .bioImg {
+            max-width: 90%;
+          }
+          .skillsContainer {
+            width: 100%;
+          }
+          .skillsAdjustment {
+            margin-bottom: 1%;
           }
         }
       `}</style>
