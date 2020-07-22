@@ -53,8 +53,10 @@ export default function TopSection() {
             text-decoration: underline;
           }
 
-          @media (max-width: 23.5em) .intro {
-            font-size: 40px;
+          @media (min-width: 800px) {
+            .introContainer {
+              font-size: 50px;
+            }
           }
         `}
       </style>

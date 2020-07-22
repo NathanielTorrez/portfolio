@@ -7,7 +7,9 @@ export default function ProjectTile({ title, description, tech, image }) {
       <Slide left>
         <div className="projectTile">
           <div className="projectTitleHidden">{title}</div>
-          <img className="projectPicture" src={image}></img>
+
+          <img className="projectPicture" src={image} />
+
           <div className="projectDescriptionContainer">
             <div className="projectTitle">{title}</div>
             <div className="projectBody">{description}</div>
@@ -16,7 +18,10 @@ export default function ProjectTile({ title, description, tech, image }) {
             </div>
             <div className="projectTechContainer">
               {tech.map((skill) => (
-                <SkillsCard photo={skill[1]} software={skill[0]} />
+                <div className="techAdjustment">
+                  {" "}
+                  <SkillsCard photo={skill[1]} software={skill[0]} />
+                </div>
               ))}
             </div>
           </div>
@@ -31,16 +36,17 @@ export default function ProjectTile({ title, description, tech, image }) {
           margin-top: 2%;
           display: flex;
           flex-direction: row;
+          align-content: center;
+          justify-content:center:
           box-shadow: 0 0.5vh 1vh 0 rgba(0, 0, 0, 0.3);
           border-radius: 2.5vh;
         }
         .projectPicture {
-          margin-top: 1%;
-          margin-left: 0.5%;
+          margin: 1%;
           border-radius: 2.5vh;
           min-width: 30%;
           max-width: 40%;
-          box-shadow: 0 0.5vh 1vh 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0.3vh 1vh 0 rgba(0, 0, 0, 0.3);
         }
         .projectDescriptionContainer {
           display: flex;
@@ -74,15 +80,25 @@ export default function ProjectTile({ title, description, tech, image }) {
         .projectTechContainer {
           width: 70%;
           height: 20%;
+          margin-bottom:1%;
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-evenly;
         }
+        .techAdjustment{
+          margin-bottom:2%;
+        }
+        .button {
+          display:none;
+        }
+        .imageContainer:hover .button {
+          display:block;
+        }
 
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
           .projectTile {
-            margin-top: 5%;
+            margin-bottom: 5%;
             flex-direction: column;
             align-items: center;
             text-align: center;
@@ -95,6 +111,8 @@ export default function ProjectTile({ title, description, tech, image }) {
             width: 90%;
           }
           .projectBody {
+            margin-top: 5%;
+            margin-bottom: 5%;
           }
           .projectTitle {
             display: none;

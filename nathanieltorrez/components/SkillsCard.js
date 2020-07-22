@@ -18,7 +18,8 @@ export default function SkillsCard({ photo, software }) {
           align-items: center;
           font-size: 2.1vh;
           margin-left: 1%;
-          box-shadow: 0 0.4vh 0.8vh 0 rgba(0, 0, 0, 0.5);
+          margin-bottom: 1%;
+          box-shadow: 0 0.2vh 0.4vh 0 rgba(0, 0, 0, 0.4);
         }
         img {
           max-width: 40%;
@@ -31,11 +32,11 @@ export default function SkillsCard({ photo, software }) {
           width: 60%;
           text-align: center;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
           .cardContainer {
             width: 13vh;
             min-width: 13vh;
-            height: 10vh;
+            min-height: 10vh;
             flex-direction: column;
             font-size: 2vh;
             margin-bottom: 1%;

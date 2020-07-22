@@ -31,12 +31,10 @@ export default function AboutSection() {
           <Slide right>
             <div className="skillsContainer">
               {softwares.map((arr, index) => (
-                <SkillsCard
-                  className="skillsAdjustment"
-                  photo={arr[1]}
-                  software={arr[0]}
-                  key={index}
-                />
+                <div className="skillsAdjustment">
+                  {" "}
+                  <SkillsCard photo={arr[1]} software={arr[0]} key={index} />
+                </div>
               ))}
             </div>
           </Slide>
@@ -98,14 +96,16 @@ export default function AboutSection() {
           align-items: center;
         }
         .skillsAdjustment {
+          margin-bottom: 5%;
+          margin-right: 5%;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
           .bio {
             width: 90%;
             font-size: 3vh;
           }
           .title {
-            font-size: 5.5vh;
+            font-size: 7vh;
           }
           .bioAndSkillsContainer {
             flex-direction: column;
@@ -117,7 +117,8 @@ export default function AboutSection() {
             width: 100%;
           }
           .skillsAdjustment {
-            margin-bottom: 1%;
+            margin-bottom: 2%;
+            margin-right: 2%;
           }
         }
       `}</style>

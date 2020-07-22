@@ -76,11 +76,12 @@ export default function ProjectsSection() {
           font-size: 5vh;
           text-decoration: underline;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
           .projectsSectionContainer {
           }
           .title {
-            font-size: 5.5vh;
+            font-size: 7vh;
+            margin-bottom: 5%;
           }
         }
       `}</style>

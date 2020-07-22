@@ -48,10 +48,12 @@ export default class Home extends React.Component {
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
+          border-top: 30px solid #252934;
           display: flex;
           justify-content: center;
           align-items: center;
+          background:white;
+
         }
       }
       `}</style>
