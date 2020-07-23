@@ -1,15 +1,21 @@
 import React from "react";
 import SkillsCard from "./SkillsCard.js";
 import Slide from "react-reveal/Slide";
+
 export default function ProjectTile({ title, description, tech, image }) {
   return (
     <>
       <Slide left>
         <div className="projectTile">
           <div className="projectTitleHidden">{title}</div>
-
-          <img className="projectPicture" src={image} />
-
+          <div className="projectPictureContainer">
+            <img className="projectPicture" src={image} />
+            <Slide left>
+              <a className="button" href={tech[0][2]}>
+                View on Github
+              </a>
+            </Slide>
+          </div>
           <div className="projectDescriptionContainer">
             <div className="projectTitle">{title}</div>
             <div className="projectBody">{description}</div>
@@ -28,9 +34,11 @@ export default function ProjectTile({ title, description, tech, image }) {
         </div>
       </Slide>
       <style jsx>{`
+
+
         .projectTile {
           min-width: 20%;
-          max-width: 98%;
+          max-width: 85%;
           height: 29%;
           border: 0.1vh solid black;
           margin-top: 2%;
@@ -40,14 +48,24 @@ export default function ProjectTile({ title, description, tech, image }) {
           justify-content:center:
           box-shadow: 0 0.5vh 1vh 0 rgba(0, 0, 0, 0.3);
           border-radius: 2.5vh;
+          background:#f4f4f4;
         }
-        .projectPicture {
-          margin: 1%;
-          border-radius: 2.5vh;
+        .projectPictureContainer {
+          display: flex;
+          justify-content:center;
           min-width: 30%;
           max-width: 40%;
+          height:90%;
+        }
+
+        .projectPicture {
+          margin: 1%;
+          margin-left:3%;
+          border-radius: 2.5vh;
+          width:100%;
           box-shadow: 0 0.3vh 1vh 0 rgba(0, 0, 0, 0.3);
         }
+
         .projectDescriptionContainer {
           display: flex;
           flex-direction: column;
@@ -89,12 +107,7 @@ export default function ProjectTile({ title, description, tech, image }) {
         .techAdjustment{
           margin-bottom:2%;
         }
-        .button {
-          display:none;
-        }
-        .imageContainer:hover .button {
-          display:block;
-        }
+
 
         @media (max-width: 800px) {
           .projectTile {
@@ -102,10 +115,11 @@ export default function ProjectTile({ title, description, tech, image }) {
             flex-direction: column;
             align-items: center;
             text-align: center;
+            max-width:98%;
           }
           .projectPicture {
             min-width: 80%;
-            max-width: 95%;
+            max-width: 100%;
           }
           .projectDescriptionContainer {
             width: 90%;
@@ -113,6 +127,7 @@ export default function ProjectTile({ title, description, tech, image }) {
           .projectBody {
             margin-top: 5%;
             margin-bottom: 5%;
+            font-size:2.2vh;
           }
           .projectTitle {
             display: none;
@@ -121,23 +136,68 @@ export default function ProjectTile({ title, description, tech, image }) {
           .projectTitleHidden {
             display: block;
           }
+          .projectPictureContainer {
+            flex-direction:column;
+            max-width:70%;
+          }
+          .button {
+
+            color:  #2892d7;
+            font-family: "Montserrat", sans-serif;
+            font-size:22px;
+            //background-color: #2892d7;
+            max-width: 90%;
+            min-height: 5%;
+            max-height:5%;
+            margin-top:3%;
+            margin-left:5%;
+            border-radius:3px;
+            padding:.5rem 1rem;
+            border:.5px solid  #2892d7;
+            box-shadow: 0 0.8vh 1vh 0 rgba(0, 0, 0, 0.6);
+            line-height:20px;
+            text-decoration: none;
+
+          }
         }
+        @media (min-width:801px) {
+          .projectPictureContainer:hover .button {
+            display: flex;
+            position: absolute;
+            align-self: center;
+            width: 20%;
+            justify-content: center;
+            align-content: center;
+            align
+
+         }
+         .projectPictureContainer:hover .projectPicture {
+              filter:gray;
+            -webkit-filter: grayscale(100%);
+            -o-transition:.5s;
+            -ms-transition:.5s;
+            -moz-transition:.5s;
+            -webkit-transition:.5s;
+            transition:.5s;
+         }
+         .button {
+          display: none;
+          color: white;
+          font-family: "Montserrat", sans-serif;
+          font-size:22px;
+          background-color: #2892d7;
+          max-width: 10%;
+          min-height: 5%;
+          max-height:10%;
+          border-radius:2px;
+          border:.3px solid black;
+          box-shadow: 0 0.8vh 1vh 0 rgba(0, 0, 0, 0.6);
+          line-height:45px;
+          text-decoration: none;
+
+        }
+      }
       `}</style>
     </>
   );
 }
-
-// .projectTile {
-//   width: 98%;
-//   height: 30%;
-// }
-// .projectPicture {
-//  height: 70%;
-//  width: 40%;
-//  margin-top: 10%;
-//  margin-right: 2%;
-// }
-// .projectTile {
-//   width: 98%;
-//   height: 30%;
-// }

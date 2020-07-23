@@ -41,10 +41,17 @@ export default function AboutSection() {
         </div>
         <Bounce bottom>
           <p className="bio">
-            That's me Nathaniel Torrez and I am a full stack software engineer
-            with passion for making peoples lives easier or more fun through the
-            use of technology! I take pride in my ability to adapt and learn new
-            technologies very fast, above is a list of strongest skills!
+            That's me, Nathaniel Torrez and I am a full stack software engineer
+            with a passion for making peoples lives easier or more fun through
+            the use of technology! I take pride in my ability to adapt and learn
+            new technologies very fast. Above is a list of my strongest
+            technical skills, however my skills go far beyond just the
+            technical. Having owned and grown a business I started at just 17, I
+            know what it takes to be succesful in a team enviorment and even
+            lead a team as well as the communication and collaboration skills it
+            takes to create a truly great product. This and my geniune passion
+            for development and betterment of oneself is what sets me apart from
+            the crowd!
           </p>
         </Bounce>
       </section>
@@ -77,8 +84,8 @@ export default function AboutSection() {
         }
         .bioImg {
           max-width: 30%;
-          border: 2vh solid white;
-          border-radius: 25px;
+          // border: 1vh solid white;
+          border-radius: 15px;
           box-shadow: 0 0.5vh 1.5vh 0px rgba(0, 0, 0, 0.6);
         }
         .bio {
@@ -86,7 +93,6 @@ export default function AboutSection() {
           font-size: 3vh;
           margin-bottom: 4%;
           margin-top: 8%;
-          font-family: "Indie Flower", cursive;
         }
         .bioAndSkillsContainer {
           min-height: 45%;

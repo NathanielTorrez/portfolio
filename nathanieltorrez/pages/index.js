@@ -3,6 +3,7 @@ import React from "react";
 import TopSection from "../components/topSection.js";
 import AboutSection from "../components/AboutSection.js";
 import ProjectsSection from "../components/ProjectsSection.js";
+import ContactSection from "../components/ContactSection.js";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -34,6 +35,7 @@ export default class Home extends React.Component {
             <TopSection />
             <AboutSection />
             <ProjectsSection />
+            <ContactSection />
           </main>
         </body>
 
@@ -43,6 +45,7 @@ export default class Home extends React.Component {
         main {
           display: block;
           min-height:100vh;
+          -webkit-font-smoothing: antialiased;
         }
 
         footer {

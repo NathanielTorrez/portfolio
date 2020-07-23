@@ -4,7 +4,11 @@ import Flip from "react-reveal/Flip";
 
 export default function ProjectsSection() {
   const BottomsUpStack = [
-    ["Javascript", "/jsLogo.png"],
+    [
+      "Javascript",
+      "/jsLogo.png",
+      "https://github.com/NathanielTorrez/BottomsUp",
+    ],
     ["Node", "/nodeLogo.jpg"],
     ["React", "/reactLogo.jpg"],
     ["CSS", "/cssLogo.jpg"],
@@ -12,19 +16,24 @@ export default function ProjectsSection() {
     ["PostgreSQL", "/postgresLogo.jpg"],
   ];
   const BookTripStack = [
-    ["Javascript", "/jsLogo.png"],
+    [
+      "Javascript",
+      "/jsLogo.png",
+      "https://github.com/NathanielTorrez/BookTrip",
+    ],
     ["Node", "/nodeLogo.jpg"],
     ["Express", "/expressImage.jpg"],
     ["PostgreSQL", "/postgresLogo.jpg"],
   ];
   const RentsyStack = [
-    ["Javascript", "/jsLogo.png"],
+    ["Javascript", "/jsLogo.png", "https://github.com/NathanielTorrez/reviews"],
     ["Node", "/nodeLogo.jpg"],
     ["Express", "/expressImage.jpg"],
     ["React", "/reactLogo.jpg"],
     ["CSS", "/cssLogo.jpg"],
     ["HTML", "/htmlLogo.jpg"],
   ];
+
   return (
     <>
       <section className="projectsSectionContainer">
@@ -64,8 +73,7 @@ export default function ProjectsSection() {
         .projectsSectionContainer {
           min-height: 150vh;
           width: 100%;
-          background: white;
-          color: #252934;
+          //color: #252934;
           display: flex;
           flex: auto;
           flex-direction: column;
@@ -73,8 +81,11 @@ export default function ProjectsSection() {
           font-family: "Montserrat", sans-serif;
         }
         .title {
-          font-size: 5vh;
           text-decoration: underline;
+          color: #eaeaea;
+          font-size: 4.99vh;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 500;
         }
         @media (max-width: 800px) {
           .projectsSectionContainer {
