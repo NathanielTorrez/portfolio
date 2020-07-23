@@ -2,6 +2,8 @@ import Head from "next/head";
 import React from "react";
 import TopSection from "../components/topSection.js";
 import AboutSection from "../components/AboutSection.js";
+import ProjectsSection from "../components/ProjectsSection.js";
+import ContactSection from "../components/ContactSection.js";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -19,33 +21,42 @@ export default class Home extends React.Component {
             href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
         </Head>
-
-        <main>
-          <TopSection />
-          <AboutSection />
-        </main>
+        <body>
+          <main>
+            <TopSection />
+            <AboutSection />
+            <ProjectsSection />
+            <ContactSection />
+          </main>
+        </body>
 
         <footer>Created by Nathaniel Torrez Development</footer>
 
         <style jsx>{`
         main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background: #252934;
+          display: block;
+          min-height:100vh;
+          -webkit-font-smoothing: antialiased;
         }
 
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
+          border-top: 30px solid #252934;
           display: flex;
           justify-content: center;
           align-items: center;
+          background:white;
+
         }
       }
       `}</style>
@@ -53,6 +64,7 @@ export default class Home extends React.Component {
         <style jsx global>{`
           html,
           body {
+            background: #252934;
             padding: 0;
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
