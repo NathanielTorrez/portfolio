@@ -1,33 +1,36 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 export default function ContantSection() {
   return (
     <>
       <section>
-        <div className="title">Need a developer?</div>
-        <p className="body">
-          I am currently open to hearing about new opportunities in the San
-          Francisco Bay Area or remotely and would be happy to showcase my
-          skills. Just hit the email button below and I will be sure to get back
-          to you shortly.
-        </p>
-        <div className="buttonsContainer">
-          <a
-            href="https://www.linkedin.com/in/nathanieltorrez/"
-            className="button"
-          >
-            LinkedIn
-          </a>
-          <a href="https://github.com/NathanielTorrez" className="button">
-            Github
-          </a>
-          <a
-            href="mailto:nathanieltorrezdev@gmail.com?subject=I%20was%20just%20on%20your%20website..."
-            className="button"
-          >
-            Email
-          </a>
-        </div>
+        <Fade bottom>
+          <div className="title">Need a developer?</div>
+          <p className="body">
+            I am currently open to hearing about new opportunities in the San
+            Francisco Bay Area or remotely and would be happy to showcase my
+            skills. Just hit the email button below and I will be sure to get
+            back to you shortly.
+          </p>
+          <div className="buttonsContainer">
+            <a
+              href="https://www.linkedin.com/in/nathanieltorrez/"
+              className="button"
+            >
+              LinkedIn
+            </a>
+            <a href="https://github.com/NathanielTorrez" className="button">
+              Github
+            </a>
+            <a
+              href="mailto:nathanieltorrezdev@gmail.com?subject=I%20was%20just%20on%20your%20website..."
+              className="button"
+            >
+              Email
+            </a>
+          </div>
+        </Fade>
       </section>
 
       <style jsx>{`
